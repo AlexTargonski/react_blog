@@ -1,6 +1,7 @@
 import React, { Component }           from 'react';
 import { connect }                    from 'react-redux';
 import { getPost, editPost }          from '../../actions/posts';
+import { browserHistory }             from 'react-router';
 
 class EditPost extends Component {
   constructor() {
@@ -38,6 +39,7 @@ class EditPost extends Component {
     console.log(this.state)
     return (
       <div>
+        <a href="#" onClick={browserHistory.goBack}>Go Back...</a>
         <form onSubmit={ this.handleSubmit.bind(this) } >
           <h2>Title:</h2>
           <input

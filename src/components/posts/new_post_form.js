@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect }          from 'react-redux';
 import { createPost }          from '../../actions/posts';
+import { browserHistory }             from 'react-router';
 
 class PostForm extends Component {
   constructor(props) {
@@ -28,6 +29,7 @@ class PostForm extends Component {
   render() {
     return (
       <div>
+        <a href="#" onClick={browserHistory.goBack}>Go Back...</a>
         <form id="new-post-form" onSubmit={ this.handleSubmit.bind(this) } >
           <h2>Title:</h2>
           <input
