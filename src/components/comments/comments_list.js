@@ -27,6 +27,7 @@ class CommentsList extends Component {
     console.log(this.props.postId)
     return (
       <div className="comments-list">
+        <h2>Comments:</h2>
         <ul>
           { this.renderComments() }
         </ul>

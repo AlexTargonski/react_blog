@@ -19,7 +19,7 @@ class CommentForm extends Component {
   new_comment.postId = this.props.postId
   this.setState({ comment: new_comment});
   }
-  
+
   handleSubmit(element) {
     element.preventDefault();
     this.props.onAddComment(this.state.comment);
@@ -34,8 +34,9 @@ class CommentForm extends Component {
           <textarea
             onChange={ this.handleChange.bind( this, 'body') }
             placeholder='Leave a comment...'
-            required
+
           />
+          <br />
           <button type="submit">Add comment</button>
         </form>
       </div>

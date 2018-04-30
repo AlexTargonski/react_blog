@@ -1,5 +1,76 @@
 body {
   margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  padding: 5%;
+  font-family: 'Raleway', sans-serif;
+  background: #ececef;
+}
+
+button {
+  border: 2px #2d0972 solid;
+  padding: 1%;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+textarea, textarea:focus{
+  border: 0;
+  height: 160px;
+  width: 65%;
+}
+
+a, a:hover, a:focus {
+  text-decoration: none;
+}
+
+h1{
+  text-align: center;
+}
+
+h1, h2 {
+  color: #616162;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.post-preview{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 5%;
+  margin-bottom: 20px;
+  background: #fff 50%;
+    background-size: auto auto;
+background-size: cover;
+border-radius: 5px;
+box-shadow: 8px 14px 38px rgba(39,44,49,.06),1px 3px 8px rgba(39,44,49,.03);
+transition: all .5s ease;
+}
+
+.post-preview p {
+  padding: 8%;
+}
+
+.post-preview a {
+  text-align: center;
+}
+
+.btn-readmore{
+  margin-top: 30px;
+  padding: 5%;
+  display: block;
+  border: 2px #2d0972 solid;
+  margin: 40%;
+}
+
+.btn-readmore:hover, button:hover {
+  background: #2d0972;
+  color: #fff;
+}
+
+.post-box{
+  background: #fff;
+  padding: 5%;
+  border-radius: 5px;
 }

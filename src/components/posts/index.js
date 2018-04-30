@@ -18,9 +18,11 @@ class PostsList extends Component {
     return this.props.posts.map((post, index) => {
       return (
         <li key={index}>
-          <span>{ post.title }</span>
-          <span>{ post.body }</span>
-          <Link to={`/posts/${post.id}`}> read more </Link>
+          <div className="post-preview">
+            <h1>{ post.title }</h1>
+            <p>{ post.body }</p>
+            <Link className="btn-readmore" to={`/posts/${post.id}`}><p>read more</p></Link>
+          </div>
         </li>
       );
     });

@@ -15,7 +15,9 @@ class Post extends Component {
     return (
       <div>
         <h1>{post.title}</h1>
-        <p>{post.body}</p>
+        <div className="post-box">
+          <p>{post.body}</p>
+        </div>
         <CommentsList
           postId = {post.id}
         />
