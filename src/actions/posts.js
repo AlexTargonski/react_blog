@@ -1,6 +1,7 @@
 import axios from 'axios';
-import { GET_POSTS, GET_POST_ID } from '../constants/action_types';
+import { GET_POSTS, GET_POST_ID, ADD_POST } from '../constants/action_types';
 import { POSTS_URL } from '../constants/API';
+import { browserHistory } from 'react-router';
 
 const HEADERS = new Headers({ 'Content-Type': 'application/json'})
 let headers = Object.assign({}, HEADERS)
@@ -32,6 +33,35 @@ export function getPost(id) {
         console.error("error: ", e);
         reject(e)
       })
+    })
+  }
+}
+
+export function createPost(post) {
+  return function(dispatch, getState) {
+    axios.post(POSTS_URL, post, { headers: headers })
+
+    .then(res => {
+      dispatch({ type: ADD_POST, payload: res.data });
+    })
+    .catch(error => {
+      console.error(error);
+    })
+
+  }
+}
+
+export function editPost(post) {
+  return function(dispatch, getState) {
+    axios.patch(`${POSTS_URL}/${post.id}`, post, { headers: headers })
+
+      .then(res => {
+        setTimeout(() => {
+          browserHistory.push('/');
+        }, 1)
+      })
+    .catch(error => {
+      console.error(error);
     })
   }
 }

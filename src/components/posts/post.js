@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect }          from 'react-redux';
 import { getPost }          from '../../actions/posts';
 import CommentsList         from '../comments/comments_list';
+import Nav                  from '../layouts/nav';
 
 class Post extends Component {
   componentDidMount () {
@@ -14,6 +15,7 @@ class Post extends Component {
 
     return (
       <div>
+        <Nav />
         <h1>{post.title}</h1>
         <div className="post-box">
           <p>{post.body}</p>

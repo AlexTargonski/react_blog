@@ -12,6 +12,12 @@ button {
   cursor: pointer;
 }
 
+input {
+  height: 40px;
+  width: 65%;
+  margin-bottom: 10px;
+}
+
 textarea, textarea:focus{
   border: 0;
   height: 160px;
@@ -20,6 +26,7 @@ textarea, textarea:focus{
 
 a, a:hover, a:focus {
   text-decoration: none;
+  color: #2d0972
 }
 
 h1{

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Link } from 'react-router';
-import { getPosts } from '../../actions/posts';
+import { connect }           from 'react-redux';
+import { Link }             from 'react-router';
+import { getPosts }         from '../../actions/posts';
+import Nav                  from '../layouts/nav';
 
 class PostsList extends Component {
   constructor(props) {
@@ -21,7 +22,7 @@ class PostsList extends Component {
           <div className="post-preview">
             <h1>{ post.title }</h1>
             <p>{ post.body }</p>
-            <Link className="btn-readmore" to={`/posts/${post.id}`}><p>read more</p></Link>
+            <Link className="btn-readmore" to={`/posts/${post.id}/profile`}><p>read more</p></Link>
           </div>
         </li>
       );
@@ -31,10 +32,13 @@ class PostsList extends Component {
   render() {
     console.log(this.props.posts)
     return (
-      <div className="posts-container">
-      <ul>
-        { this.renderPosts() }
-      </ul>
+      <div>
+        <Nav />
+        <div className="posts-container">
+          <ul>
+            { this.renderPosts() }
+          </ul>
+        </div>
       </div>
     );
   }
