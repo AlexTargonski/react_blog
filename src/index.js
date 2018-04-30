@@ -29,7 +29,7 @@ ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
       <Route path="/" component={PostsList}/>
-      <Route path="/posts/:id/profile" component={Post} />
+      <Route path="/posts/:id" component={Post} />
       <Route path="/posts/new" component={PostForm} />
       <Route path="/posts/:id/edit" component={PostEdit} />
     </Router>

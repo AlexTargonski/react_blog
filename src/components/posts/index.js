@@ -22,7 +22,7 @@ class PostsList extends Component {
           <div className="post-preview">
             <h1>{ post.title }</h1>
             <p>{ post.body }</p>
-            <Link className="btn-readmore" to={`/posts/${post.id}/profile`}><p>read more</p></Link>
+            <Link className="btn-readmore" to={`/posts/${post.id}`}><p>read more</p></Link>
           </div>
         </li>
       );
