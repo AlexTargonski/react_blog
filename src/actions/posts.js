@@ -56,9 +56,7 @@ export function editPost(post) {
     axios.patch(`${POSTS_URL}/${post.id}`, post, { headers: headers })
 
       .then(res => {
-        setTimeout(() => {
-          browserHistory.push('/');
-        }, 1)
+        console.log("edit")
       })
     .catch(error => {
       console.error(error);

@@ -18,7 +18,7 @@ class EditPost extends Component {
     let id = this.props.params.id;
     this.context.store.dispatch(getPost(id))
       .then(response => {
-        this.setState({task: response.data});
+        this.setState({post: response.data});
       })
   };
 
@@ -35,16 +35,15 @@ class EditPost extends Component {
 
   render() {
     const { post } = this.state
-
+    console.log(this.state)
     return (
       <div>
-        <form id="new-post-form" onSubmit={ this.handleSubmit.bind(this) } >
+        <form onSubmit={ this.handleSubmit.bind(this) } >
           <h2>Title:</h2>
           <input
             value={post.title}
             onChange={ this.handleChange.bind( this, 'title') }
             type="text"
-            placeholder='Enter a title'
           />
           <br />
           <h2>Body:</h2>

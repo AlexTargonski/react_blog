@@ -3,6 +3,7 @@ import { connect }          from 'react-redux';
 import { getPost }          from '../../actions/posts';
 import CommentsList         from '../comments/comments_list';
 import Nav                  from '../layouts/nav';
+import { Link }             from 'react-router';
 
 class Post extends Component {
   componentDidMount () {
@@ -17,6 +18,7 @@ class Post extends Component {
       <div>
         <Nav />
         <h1>{post.title}</h1>
+        <Link to={`/posts/${post.id}/edit`}>Edit</Link>
         <div className="post-box">
           <p>{post.body}</p>
         </div>
