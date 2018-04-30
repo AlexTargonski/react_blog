@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GET_COMMENTS} from '../constants/action_types';
+import { GET_COMMENTS, ADD_COMMENT } from '../constants/action_types';
 import { COMMENTS_URL } from '../constants/API';
 
 const HEADERS = new Headers({ 'Content-Type': 'application/json'})
@@ -17,5 +17,18 @@ export function getComments() {
     .catch(e => {
       console.error("error: ", e);
     })
+  }
+}
+
+export function addComment(comment) {
+  return function(dispatch, getState) {
+    axios.post(COMMENTS_URL, comment, { headers: headers })
+
+      .then(res => {
+        dispatch({ type: ADD_COMMENT, payload: res.data });
+      })
+      .catch(error => {
+        console.error(error);
+      })
   }
 }

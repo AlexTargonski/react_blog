@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { getComments } from '../../actions/comments';
+import { connect }          from 'react-redux';
+import { getComments }      from '../../actions/comments';
+import CommentForm          from './new_comment_form'
 
 class CommentsList extends Component {
   constructor(props) {
@@ -26,9 +27,12 @@ class CommentsList extends Component {
     console.log(this.props.postId)
     return (
       <div className="comments-list">
-      <ul>
-        { this.renderComments() }
-      </ul>
+        <ul>
+          { this.renderComments() }
+        </ul>
+        < CommentForm
+          postId = {this.props.postId}
+        />
       </div>
     );
   }
