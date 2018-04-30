@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { addComment } from '../../actions/comments';
+import React, { Component } from "react";
+import { connect }          from "react-redux";
+import { addComment }       from "../../actions/comments";
 
 class CommentForm extends Component {
   constructor(props) {
   super(props);
     this.state = {
       comment: {
-       postId: '',
-       body: '',
+       postId: "",
+       body: "",
      }
    }
  }

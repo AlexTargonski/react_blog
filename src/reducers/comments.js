@@ -1,4 +1,4 @@
-import { GET_COMMENTS, ADD_COMMENT } from '../constants/action_types';
+import { GET_COMMENTS, ADD_COMMENT } from "../constants/action_types";
 
 let initState = {
   comments: [],

@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { connect }           from 'react-redux';
-import { Link }             from 'react-router';
-import { getPosts }         from '../../actions/posts';
-import Nav                  from '../layouts/nav';
+import React, { Component } from "react";
+import { connect }          from "react-redux";
+import { Link }             from "react-router";
+import { getPosts }         from "../../actions/posts";
+import Nav                  from "../layouts/nav";
 
 class PostsList extends Component {
   constructor(props) {

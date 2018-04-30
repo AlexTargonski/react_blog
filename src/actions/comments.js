@@ -1,8 +1,8 @@
-import axios from 'axios';
-import { GET_COMMENTS, ADD_COMMENT } from '../constants/action_types';
-import { COMMENTS_URL } from '../constants/API';
+import axios                          from "axios";
+import { GET_COMMENTS, ADD_COMMENT }  from "../constants/action_types";
+import { COMMENTS_URL }               from "../constants/API";
 
-const HEADERS = new Headers({ 'Content-Type': 'application/json'})
+const HEADERS = new Headers({ "Content-Type": 'application/json'})
 let headers = Object.assign({}, HEADERS)
 
 export function getComments() {

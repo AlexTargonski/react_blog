@@ -1,6 +1,6 @@
-import axios from 'axios';
-import { GET_POSTS, GET_POST_ID, ADD_POST } from '../constants/action_types';
-import { POSTS_URL } from '../constants/API';
+import axios                                from "axios";
+import { GET_POSTS, GET_POST_ID, ADD_POST } from "../constants/action_types";
+import { POSTS_URL }                        from "../constants/API";
 
 const HEADERS = new Headers({ 'Content-Type': 'application/json'})
 let headers = Object.assign({}, HEADERS)
@@ -30,7 +30,6 @@ export function getPost(id) {
       })
       .catch(e => {
         console.error("error: ", e);
-        reject(e)
       })
     })
   }

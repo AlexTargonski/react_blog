@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import { connect }          from 'react-redux';
-import { createPost }          from '../../actions/posts';
-import { browserHistory }             from 'react-router';
+import React, { Component } from "react";
+import { connect }          from "react-redux";
+import { createPost }       from "../../actions/posts";
+import { browserHistory }   from "react-router";
 
 class PostForm extends Component {
   constructor(props) {
     super(props)
       this.state = {
         post: {
-          title: '',
-          body: ''
+          title: "",
+          body: ""
         }
       }
     }

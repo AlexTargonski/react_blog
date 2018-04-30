@@ -1,4 +1,4 @@
-import { GET_POSTS, GET_POST_ID, ADD_POST } from '../constants/action_types';
+import { GET_POSTS, GET_POST_ID, ADD_POST } from "../constants/action_types";
 
 let initState = {
   posts: [],
